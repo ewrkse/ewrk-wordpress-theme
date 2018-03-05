@@ -10,4 +10,4 @@ Fonts used in the theme are Source Sans Pro, Source Code Pro and Cormorant Garam
 
 At the moment, you need to study the styles.css typography section to get the path correct. The fonts are not included in this package and need to be downloaded separately.
 
-
+If you decide to use this theme and find some of the many missing stylings (e.g. only the widgets in use on https://ewrk.se are actually styled), don't hesitate to send a request!
