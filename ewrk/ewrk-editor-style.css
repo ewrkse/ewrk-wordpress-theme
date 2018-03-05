@@ -1,0 +1,601 @@
+html {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+	margin: 0 1em;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #444;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: 0;
+	padding: .67em 0;
+}
+
+p, li {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.33em;
+	font-weight: 300;
+	margin-bottom: 1.5em;
+	text-align: justify;
+}
+
+p input, li input,
+p code, li code,
+p pre, li pre,
+p kbd, li kbd,
+p tt, li tt,
+p var, li var {
+	font-size: 75%;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+blockquote, dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+	padding: 0 1em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+code,
+kbd,
+pre,
+samp {
+	background-color: #fafafa;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	padding: .1em .3em;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+small {
+	font-size: 80%;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 0 0 1.5em 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+
+figure {
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+a {
+	color: #000;
+	background-color: transparent;
+	text-decoration: none;
+	font-weight: 500;
+}
+a:active,
+a:hover {
+	outline: 0;
+}
+
+
+img,
+embed,
+iframe,
+object {
+	height: auto;
+	max-width: 100%;
+}
+
+img {
+	display: block;
+	border: 0;
+	max-width: calc(100% - 1em - 1em);
+}
+
+
+pre, code, kbd, tt, var, samp {
+	font-family: 'Source Code Pro', monospace;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	font-family: 'Source Sans Pro';
+}
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-ExtraLight.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-ExtraLight.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-ExtraLight.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-ExtraLight.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-ExtraLight.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-ExtraLightIt.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-ExtraLightIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-ExtraLightIt.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-ExtraLightIt.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-ExtraLightIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-Light.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-Light.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-Light.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-Light.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-LightIt.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-LightIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-LightIt.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-LightIt.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-LightIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-Regular.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-Regular.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-Regular.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-Regular.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-It.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-It.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-It.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-It.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-It.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-Semibold.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-Semibold.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-Semibold.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-Semibold.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-Semibold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-SemiboldIt.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-SemiboldIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-SemiboldIt.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-SemiboldIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-Bold.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-Bold.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-Bold.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-Bold.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-BoldIt.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-BoldIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-BoldIt.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-BoldIt.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-BoldIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-Black.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-Black.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-Black.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-Black.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-Black.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcesans/EOT/SourceSansPro-BlackIt.eot') format('embedded-opentype'),
+         url('../../font/sourcesans/WOFF2/TTF/SourceSansPro-BlackIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcesans/WOFF/OTF/SourceSansPro-BlackIt.otf.woff') format('woff'),
+         url('../../font/sourcesans/OTF/SourceSansPro-BlackIt.otf') format('opentype'),
+         url('../../font/sourcesans/TTF/SourceSansPro-BlackIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-ExtraLight.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-ExtraLight.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-ExtraLight.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-ExtraLight.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-ExtraLight.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-ExtraLightIt.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-ExtraLightIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-ExtraLightIt.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-ExtraLightIt.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-ExtraLightIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-Light.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-Light.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-Light.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-Light.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-LightIt.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-LightIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-LightIt.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-LightIt.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-LightIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-Regular.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-Regular.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-Regular.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-Regular.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-It.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-It.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-It.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-It.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-It.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-Medium.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-Medium.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-Medium.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-Medium.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-MediumIt.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-MediumIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-MediumIt.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-MediumIt.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-MediumIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-Semibold.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-Semibold.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-Semibold.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-Semibold.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-Semibold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-SemiboldIt.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-SemiboldIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-SemiboldIt.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-SemiboldIt.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-SemiboldIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-Bold.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-Bold.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-Bold.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-Bold.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-BoldIt.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-BoldIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-BoldIt.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-BoldIt.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-BoldIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-Black.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-Black.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-Black.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-Black.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-Black.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Code Pro';
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/sourcecode/EOT/SourceCodePro-BlackIt.eot') format('embedded-opentype'),
+         url('../../font/sourcecode/WOFF2/TTF/SourceCodePro-BlackIt.ttf.woff2') format('woff2'),
+         url('../../font/sourcecode/WOFF/OTF/SourceCodePro-BlackIt.otf.woff') format('woff'),
+         url('../../font/sourcecode/OTF/SourceCodePro-BlackIt.otf') format('opentype'),
+         url('../../font/sourcecode/TTF/SourceCodePro-BlackIt.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Cormorant Garamond';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/cormorant/CormorantGaramond-Light.eot') format('embedded-opentype'),
+         url('../../font/cormorant/CormorantGaramond-Light.woff2') format('woff2'),
+         url('../../font/cormorant/CormorantGaramond-Light.woff') format('woff'),
+         url('../../font/cormorant/CormorantGaramond-Light.otf') format('opentype'),
+         url('../../font/cormorant/CormorantGaramond-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Cormorant Garamond';
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/cormorant/CormorantGaramond-LightItalic.eot') format('embedded-opentype'),
+         url('../../font/cormorant/CormorantGaramond-LightItalic.woff2') format('woff2'),
+         url('../../font/cormorant/CormorantGaramond-LightItalic.woff') format('woff'),
+         url('../../font/cormorant/CormorantGaramond-LightItalic.otf') format('opentype'),
+         url('../../font/cormorant/CormorantGaramond-LightItalic.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Cormorant Garamond';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/cormorant/CormorantGaramond-Regular.eot') format('embedded-opentype'),
+         url('../../font/cormorant/CormorantGaramond-Regular.woff2') format('woff2'),
+         url('../../font/cormorant/CormorantGaramond-Regular.woff') format('woff'),
+         url('../../font/cormorant/CormorantGaramond-Regular.otf') format('opentype'),
+         url('../../font/cormorant/CormorantGaramond-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Cormorant Garamond';
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/cormorant/CormorantGaramond-Italic.eot') format('embedded-opentype'),
+         url('../../font/cormorant/CormorantGaramond-Italic.woff2') format('woff2'),
+         url('../../font/cormorant/CormorantGaramond-Italic.woff') format('woff'),
+         url('../../font/cormorant/CormorantGaramond-Italic.otf') format('opentype'),
+         url('../../font/cormorant/CormorantGaramond-Italic.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Cormorant Garamond';
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/cormorant/CormorantGaramond-Semibold.eot') format('embedded-opentype'),
+         url('../../font/cormorant/CormorantGaramond-Semibold.woff2') format('woff2'),
+         url('../../font/cormorant/CormorantGaramond-Semibold.woff') format('woff'),
+         url('../../font/cormorant/CormorantGaramond-Semibold.otf') format('opentype'),
+         url('../../font/cormorant/CormorantGaramond-Semibold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Cormorant Garamond';
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/cormorant/CormorantGaramond-SemiboldItalic.eot') format('embedded-opentype'),
+         url('../../font/cormorant/CormorantGaramond-SemiboldItalic.woff2') format('woff2'),
+         url('../../font/cormorant/CormorantGaramond-SemiboldItalic.woff') format('woff'),
+         url('../../font/cormorant/CormorantGaramond-SemiboldItalic.otf') format('opentype'),
+         url('../../font/cormorant/CormorantGaramond-SemiboldItalic.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Cormorant Garamond';
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../../font/cormorant/CormorantGaramond-Bold.eot') format('embedded-opentype'),
+         url('../../font/cormorant/CormorantGaramond-Bold.woff2') format('woff2'),
+         url('../../font/cormorant/CormorantGaramond-Bold.woff') format('woff'),
+         url('../../font/cormorant/CormorantGaramond-Bold.otf') format('opentype'),
+         url('../../font/cormorant/CormorantGaramond-Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Cormorant Garamond';
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../../font/cormorant/CormorantGaramond-BoldItalic.eot') format('embedded-opentype'),
+         url('../../font/cormorant/CormorantGaramond-BoldItalic.woff2') format('woff2'),
+         url('../../font/cormorant/CormorantGaramond-BoldItalic.woff') format('woff'),
+         url('../../font/cormorant/CormorantGaramond-BoldItalic.otf') format('opentype'),
+         url('../../font/cormorant/CormorantGaramond-BoldItalic.ttf') format('truetype');
+}
+
+
