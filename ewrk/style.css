@@ -53,52 +53,6 @@ body {
 	margin: 0;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-	display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-	vertical-align: baseline;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-
-[hidden],
-template {
-	display: none;
-}
-
-a {
-	background-color: transparent;
-}
-
-a:active,
-a:hover {
-	outline: 0;
-}
-
-abbr[title] {
-	border-bottom: 1px dotted;
-}
-
 b,
 strong {
 	font-weight: bold;
@@ -121,21 +75,14 @@ small {
 	font-size: 80%;
 }
 
-sub,
-sup {
+sub, sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
-
-sup {
-	top: -0.5em;
-}
-
-sub {
-	bottom: -0.25em;
-}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
 
 img {
 	border: 0;
@@ -672,6 +619,31 @@ th {
 # Elements
 --------------------------------------------------------------*/
 
+article, aside, details,
+figcaption, figure, footer,
+header, main, menu, nav,
+section, summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
 p input, li input,
 p code, li code,
 p pre, li pre,
@@ -701,11 +673,6 @@ textarea {
 	line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	margin: 0;
-	padding: .67em 0;
-}
 
 p, li {
 	margin-bottom: 1.5em;
@@ -916,6 +883,7 @@ textarea {
 }
 
 a {
+	background-color: transparent;
 	color: #000;
 	text-decoration: none;
 }
@@ -966,9 +934,10 @@ a.more-link:after {
 	animation-iteration-count: 1;
 }
 
-a[target=_blank]:after {
+a[target=_blank]:hover:after {
 	position: absolute;
-	content: '(new tab)';
+	content: 'new tab';
+	font-weight: 300;
 	font-style: italic;
 	font-size: 50%;
 	color: #999;
@@ -1353,11 +1322,27 @@ html {
 	}
 }
 
+.entry-content * {
+	font-family: 'Cormorant Garamond', serif;
+}
+.entry-header h1, .entry-header h2 { font-weight: bold; }
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: 0;
+	padding: .67em 0 0;
+	font-weight: 400;
+}
+h1, h2 { font-size: 1.67em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.33em; font-style: bold; }
+h5 { font-size: 1.33em; font-style: italic; }
+h6 { font-size: 1.33em; font-variant: small-caps;}
+
 p,
 .site-content li {
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 1.33em;
 	font-weight: 300;
+	font-size: 1.33em;
 }
 
 pre, code, kbd, tt, var, samp {
@@ -1381,6 +1366,7 @@ input[type="submit"] {
 }
 
 .site-title {
+	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	padding: 1em 0 .3em;
