@@ -172,3 +172,9 @@ function remove_more_link_scroll( $link ) {
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
 add_editor_style( 'ewrk-editor-style.css' );
+
+function my_mime_types($mime_types) {
+	$mime_types['ly'] = 'text/lilypond';
+	return $mime_types;
+}
+add_filter('upload_mimes', 'my_mime_types', 1, 1);

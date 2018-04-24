@@ -101,9 +101,6 @@ hr {
 	height: 0;
 }
 
-pre {
-	overflow: auto;
-}
 
 code,
 kbd,
@@ -657,7 +654,7 @@ p var, li var {
 .entry-content,
 .entry-footer,
 .comments-area,
-.comment:not(:last-child), 
+.comment-content,
 .main-navigation
 {
 	border-bottom: 1px solid #eee;
@@ -700,6 +697,7 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+	font-size: .85em;
 }
 
 abbr, acronym {
@@ -1177,6 +1175,10 @@ li.menu-item {
 	background-color: #ffe;
 }
 
+.comment .edit-link {
+	float: right;
+}
+
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -1322,7 +1324,8 @@ html {
 	}
 }
 
-.entry-content * {
+.entry-content *,
+.comment-form-comment {
 	font-family: 'Cormorant Garamond', serif;
 }
 .entry-header h1, .entry-header h2 { font-weight: bold; }
@@ -1339,14 +1342,20 @@ h4 { font-size: 1.33em; font-style: bold; }
 h5 { font-size: 1.33em; font-style: italic; }
 h6 { font-size: 1.33em; font-variant: small-caps;}
 
-p,
-.site-content li {
+.post p,
+.page p,
+.post li,
+.page li {
 	font-weight: 300;
 	font-size: 1.33em;
 }
 
+.entry-content pre, .entry-content code, .entry-content kbd,
+.entry-content tt, .entry-content var, .entry-content samp, 
+.entry-content code span,
 pre, code, kbd, tt, var, samp {
 	font-family: 'Source Code Pro', monospace;
+	font-weight: 300;
 }
 
 button,
@@ -1366,6 +1375,7 @@ input[type="submit"] {
 }
 
 .site-title {
+	font-size: 2em;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: .1em;
@@ -1374,8 +1384,7 @@ input[type="submit"] {
 }
 
 .site-description {
-	font-size: 150%;
-	font-weight: bolder;
+	font-size: 125%;
 	font-style: italic;
 	letter-spacing: .1em;
 	margin: 0;
@@ -1420,8 +1429,7 @@ input[type="submit"] {
 	article:not([class*="tag-"]) .entry-footer .cat-links {
 		width: 100%;
 	}
-	.entry-footer .cat-links:last-child,
-	.entry-footer .cat-links:nth-last-child(2) {
+	.entry-footer .cat-links a:only-child {
 		line-height: 3em;
 	}
 	
@@ -1477,6 +1485,15 @@ input[type="submit"] {
 .comments-area {
 	overflow: auto;
 	padding-bottom: 1em;
+}
+
+.comments-area a,
+.comments-area p, .comments-area li {
+	font-weight: 300;
+}
+
+.comments-area time {
+	font-size: 90%;
 }
 
 .logged-in-as a:nth-child(2) {
